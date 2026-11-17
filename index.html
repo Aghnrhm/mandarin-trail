@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#102d38">
+  <meta name="description" content="Mandarin Trail: an offline-first, gamified Mandarin course from pinyin to HSK 2 foundations.">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" type="image/png" href="./icon-192.png">
+  <link rel="apple-touch-icon" href="./icon-192.png">
+  <title>Mandarin Trail · 从零开始</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./data.js" defer></script>
+  <script src="./strokes.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <div id="app" class="shell">
+    <header class="topbar">
+      <button class="brand" data-nav="home" aria-label="Mandarin Trail home"><span class="brand-symbol">文</span><span class="brand-copy"><b>mandarin<span class="brand-em">trail</span></b><small>慢慢来，学得好</small></span></button>
+      <div class="header-right"><span id="connectionBadge" class="connection"><span class="signal-dot"></span><span class="connection-label">Ready offline</span></span><button class="xp-chip" data-nav="profile" aria-label="Your XP and profile"><span>✦</span><strong id="headerXp">0 XP</strong></button></div>
+    </header>
+    <main id="view" aria-live="polite"></main>
+    <nav class="bottom-nav" aria-label="Main navigation">
+      <button data-nav="home" class="nav-item active"><span class="nav-symbol">⌂</span><span>Home</span></button>
+      <button data-nav="learn" class="nav-item"><span class="nav-symbol">▤</span><span>Learn</span></button>
+      <button data-nav="practice" class="nav-item"><span class="nav-symbol">◇</span><span>Practice</span></button>
+      <button data-nav="write" class="nav-item"><span class="nav-symbol">✎</span><span>Write</span></button>
+      <button data-nav="explore" class="nav-item"><span class="nav-symbol">☷</span><span>Explore</span></button>
+    </nav>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <input type="file" id="restoreFile" accept=".json,application/json" hidden>
+</body>
+</html>
